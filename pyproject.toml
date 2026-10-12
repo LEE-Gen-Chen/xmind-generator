@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "xmindgen"
+version = "1.0.0"
+description = "Pure-Python XMind 8 file generator — no SDK, no dependencies"
+readme = "README.md"
+license = {text = "MIT"}
+authors = [
+    {name = "Li Chuangjie", email = "lichuangjie@example.com"}
+]
+keywords = ["xmind", "mind-map", "zip", "xml", "xmap", "productivity"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Office/Business",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+requires-python = ">=3.8"
+
+[project.urls]
+Homepage = "https://github.com/LEE-Gen-Chen/xmind-generator"
+Documentation = "https://github.com/LEE-Gen-Chen/xmind-generator#readme"
+Repository = "https://github.com/LEE-Gen-Chen/xmind-generator"
+Issues = "https://github.com/LEE-Gen-Chen/xmind-generator/issues"
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["xmindgen*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
